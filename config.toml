@@ -6,12 +6,6 @@ title = "orchid"
 languageCode = "en-us"
 baseURL = "https://orchidmajumder.github.io"
 
-# Add your Disqus shortname here.
-# disqusShortname = ""
-
-# Add your Google Analytics identifier: UA-XXXXXXXX-X
-# googleAnalytics = ""
-
 # Optional params
 [params]
   # Follow the Hugo date/time format reference here:
