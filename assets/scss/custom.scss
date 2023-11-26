@@ -22,7 +22,9 @@
     font-size: 16px;
     font-weight: 200;
     font-family: "Menlo", "Monaco", "Consolas";
+    margin-bottom: 40%;
 }
+
 
 .splash {
   h3 {
@@ -38,4 +40,45 @@
   text-align: center;
 }
 
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 1em auto;
+  padding: 0;
+  width: 50%;
+}
+
+@media only screen and (min-width: 200px) {
+  .pagination {
+    width: 50%;
+    font-size: 0.7em;
+  }
+}
+
+.pagination > .page-item {
+  border: 0px solid #ddd;
+  flex: 1;
+  text-align: center;
+  width: 1em;
+}
+
+.pagination .page-link {
+  display: inline;
+  color: black;
+  text-decoration: none;
+}
+
+.pagination > .page-item.active {
+  background-color: white;
+  text-decoration: underline;
+}
+.pagination > .page-item.active > .page-link {
+  color: black;
+}
+
+.pagination > .page-item.disabled > .page-link {
+  color: grey;
+}
 
