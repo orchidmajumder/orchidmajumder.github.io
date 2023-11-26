@@ -4,7 +4,7 @@
 
 .nav {
   font-size: 16px;
-  font-family: "Monaco", "Consolas", "Menlo", monospace;
+  font-family: "Monaco", "Consolas", "Menlo";
   color: black;
 }
 
@@ -14,18 +14,20 @@
 
 .splash {
     font-size: 10px;
-    letter-spacing: 0.0em;
+    font-weight: 400;
+    font-family: "Menlo", "Monaco", "Consolas";
 }
 
 .post {
     font-size: 16px;
     font-weight: 200;
+    font-family: "Menlo", "Monaco", "Consolas";
 }
 
 .splash {
   h3 {
     font-size: 1.75em;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.25;
     letter-spacing: -0.03em;
     max-width: 28em;
