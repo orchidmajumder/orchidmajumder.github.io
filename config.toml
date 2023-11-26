@@ -17,11 +17,12 @@ baseURL = "https://orchidmajumder.github.io"
   github = "https://github.com/orchidmajumder"
   email = "mailto:orchidmajumder@gmail.com"
   linkedin = "https://www.linkedin.com/in/orchidmajumder/"
+  scholar = "https://scholar.google.com/citations?user=7KgIMosAAAAJ&hl=en"
 
   # Titles for your icons (shown as tooltips), and also their display order.
   # Currently, these icons are supported:
   #   "Twitter", "GitHub", "Email", "Mastodon", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
-  iconOrder = ["Twitter", "GitHub", "LinkedIn", "Email"]
+  iconOrder = ["Twitter", "GitHub", "LinkedIn", "Scholar"]
 
   # Metadata for Twitter cards, defaults to params.twitter
   twitterSite = "@orchidmajumder"
