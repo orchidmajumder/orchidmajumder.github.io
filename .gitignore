@@ -9,3 +9,4 @@ dist
 resources/
 package-lock.json
 .editorconfig
+*.lock
