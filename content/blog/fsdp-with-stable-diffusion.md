@@ -1,5 +1,5 @@
 ---
-title: "Diffusion Model Training with PyTorch FSDP "
+title: "Latent Diffusion Model Training with PyTorch FSDP "
 date: 2023-09-26
 slug: "fsdp-pytorch-diffusion"
 description: "Details coming soon .... "
