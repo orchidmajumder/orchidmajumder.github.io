@@ -22,7 +22,6 @@
     font-size: 16px;
     font-weight: 200;
     font-family: "Menlo", "Monaco", "Consolas";
-    margin-bottom: 40%;
 }
 
 
@@ -46,7 +45,7 @@
   justify-content: space-between;
   list-style: none;
   margin: 1em auto;
-  padding: 0;
+  padding-top: 5rem;
   width: 50%;
 }
 
@@ -82,3 +81,35 @@
   color: grey;
 }
 
+.tag__link {
+  text-decoration: none;
+  color: #000a33;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  font-style: italic;
+
+  &:hover {
+    background-color: white;
+    text-decoration: underline;
+  }
+}
+
+.tags__list {
+  flex-wrap: wrap;
+  padding-left: inherit;
+  margin: 1.5rem 0 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-icons {
+  justify-content: center;
+  padding-top: 2rem;
+  margin-left: -0.8rem;
+}
+
+#post__title {
+  font-size: 2.0rem;
+}
