@@ -6,7 +6,15 @@
   font-size: 16px;
   font-family: "Monaco", "Consolas", "Menlo";
   color: black;
+  position: absolute;
 }
+
+@media only screen and (max-width: 400px) {
+  .nav {
+    position: sticky;
+  }
+}
+
 
 .nav__list a {
   color: black;
@@ -16,6 +24,14 @@
     font-size: 10px;
     font-weight: 400;
     font-family: "Menlo", "Monaco", "Consolas";
+}
+
+.splash-container {
+    height: 100%;
+    display: flex;
+    justify-content: safe center;
+    align-items: safe center;
+    font-size: 14px;
 }
 
 .post {
@@ -42,17 +58,17 @@
 
 .pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
   margin: 1em auto;
   padding-top: 5rem;
+  font-size: 0.8em;
   width: 50%;
 }
 
-@media only screen and (min-width: 200px) {
+@media only screen and (max-width: 400px) {
   .pagination {
-    width: 50%;
-    font-size: 0.7em;
+    font-size: 0.3em;
   }
 }
 
@@ -114,3 +130,4 @@
 #post__title {
   font-size: 2.0rem;
 }
+
