@@ -1,6 +1,6 @@
 # DO NOT REMOVE THIS
 theme = ["hugo-theme-codex"]
-paginate = 1
+paginate = 6
 # Override these settings with your own
 title = "orchidmajumder.github.io"
 languageCode = "en-us"
