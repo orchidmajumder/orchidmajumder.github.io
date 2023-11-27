@@ -4,7 +4,7 @@ date: 2023-09-26
 slug: "fsdp-pytorch-diffusion"
 description: "Details coming soon .... "
 draft: false
-tags: ["pytorch", "fsdp", "diffusion", "distributed"]
+tags: ["pytorch", "fsdp", "diffusion"]
 math: true
 toc: false
 ---
