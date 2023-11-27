@@ -9,12 +9,6 @@
   position: absolute;
 }
 
-@media only screen and (max-width: 400px) {
-  .nav {
-    position: sticky;
-  }
-}
-
 
 .nav__list a {
   color: black;
@@ -125,3 +119,42 @@
   font-size: 2.0rem;
 }
 
+.tags__browse {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  flex-direction: row;
+  padding-left: 0;
+}
+
+
+.tags__browse ul {
+    display:inline
+}
+
+.tags__browse li {
+    display:inline
+}
+
+
+.tag__browse {
+    display: inline-flex;
+    margin-right: 1em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+.tag__browse_link {
+  text-decoration: none;
+  color: #000a33;
+  background-color: transparent;
+  font-size: 0.7rem;
+  font-style: italic;
+
+  &:hover {
+    background-color: white;
+    text-decoration: underline;
+  }
+}

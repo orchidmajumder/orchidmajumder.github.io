@@ -8,6 +8,10 @@
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2 2006" }}
 
 <div class="post-list__container">
+  {{ partial "browse-by-tag.html" .}}
+</div>
+
+<div class="post-list__container">
   <ul class="post-list">
     {{ range .Paginator.Pages }}
     <li class="post">
