@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Distributed-Training on </title>
+    <link>//localhost:1313/tags/distributed-training/</link>
+    <description>Recent content in Distributed-Training on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/distributed-training/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latent Diffusion Model Training with PyTorch FSDP</title>
+      <link>//localhost:1313/blog/fsdp-pytorch-diffusion/</link>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/fsdp-pytorch-diffusion/</guid>
+      <description>&lt;p&gt;Coming soon.&lt;/p&gt;&#xA;&lt;!--&#xA;## Introduction&#xA;&#xA;Training large diffusion models requires distributing both data and model parameters across multiple GPUs. PyTorch FSDP (Fully Sharded Data Parallel) enables this by sharding model parameters, gradients, and optimizer states.&#xA;&#xA;## FSDP Basics&#xA;&#xA;The diffusion loss can be written as:&#xA;&#xA;$$&#xA;\mathcal{L} = \mathbb{E}_{t, x_0, \epsilon} \left[ \| \epsilon - \epsilon_\theta(x_t, t) \|^2 \right]&#xA;$$&#xA;&#xA;where $\epsilon_\theta$ is the noise prediction network.&#xA;&#xA;## Wrapping the Model&#xA;&#xA;```python&#xA;from torch.distributed.fsdp import FullyShardedDataParallel as FSDP&#xA;&#xA;model = FSDP(&#xA;    unet,&#xA;    sharding_strategy=ShardingStrategy.FULL_SHARD,&#xA;    mixed_precision=MixedPrecision(param_dtype=torch.bfloat16),&#xA;)&#xA;```&#xA;--&gt;</description>
+    </item>
+    <item>
+      <title>Webdataset Streaming from S3 to PyTorch</title>
+      <link>//localhost:1313/blog/webdataset-streaming-s3-torch/</link>
+      <pubDate>Tue, 26 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/webdataset-streaming-s3-torch/</guid>
+      <description>&lt;p&gt;Coming soon.&lt;/p&gt;&#xA;&lt;!--&#xA;## Introduction&#xA;&#xA;When training large models, loading data efficiently becomes critical. WebDataset provides a way to stream sharded tar files directly from S3 without downloading the entire dataset first.&#xA;&#xA;## Setup&#xA;&#xA;```python&#xA;import webdataset as wds&#xA;import boto3&#xA;&#xA;# Create S3-backed dataset&#xA;url = &#34;pipe:aws s3 cp s3://bucket/data-{000000..000099}.tar -&#34;&#xA;dataset = wds.WebDataset(url).shuffle(1000).decode(&#34;pil&#34;)&#xA;```&#xA;&#xA;## Key Benefits&#xA;&#xA;- **No local storage needed** - stream directly from S3&#xA;- **Shuffling** - efficient shuffling across shards&#xA;- **Parallel loading** - works with PyTorch DataLoader workers&#xA;--&gt;</description>
+    </item>
+  </channel>
+</rss>

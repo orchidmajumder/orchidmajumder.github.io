@@ -28,6 +28,20 @@
   </ul>
 </div>
 
-{{ template "_internal/pagination.html" . }}
+{{ with .Paginator }}
+  {{ if gt .TotalPages 1 }}
+  <nav class="pagination">
+    {{ if .HasPrev }}
+      <a class="page-item" href="{{ .Prev.URL }}">« Prev</a>
+    {{ end }}
+    {{ range .Pagers }}
+      <a class="page-item{{ if eq . $.Paginator }} active{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+    {{ end }}
+    {{ if .HasNext }}
+      <a class="page-item" href="{{ .Next.URL }}">Next »</a>
+    {{ end }}
+  </nav>
+  {{ end }}
+{{ end }}
 
 {{ end }}

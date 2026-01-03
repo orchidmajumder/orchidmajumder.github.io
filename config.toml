@@ -1,16 +1,27 @@
 # DO NOT REMOVE THIS
 theme = ["hugo-theme-codex"]
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 # Override these settings with your own
-title = "orchidmajumder.github.io"
+title = "Orchid Majumder"
 languageCode = "en-us"
 baseURL = "https://orchidmajumder.github.io"
+
+# RSS Feed
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
 
 # Optional params
 [params]
   # Follow the Hugo date/time format reference here:
   # https://gohugo.io/functions/format/#gos-layout-string
   dateFormat = "January 2, 2006"
+  
+  # SEO
+  description = "Orchid Majumder - Principal Research Engineer at Amazon AGI. Research on large-scale multi-modal models, few-shot learning, and AutoML."
+  keywords = ["machine learning", "deep learning", "research", "Amazon AGI", "PyTorch", "distributed training"]
 
   # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
   twitter = "https://twitter.com/orchidmajumder"
@@ -55,4 +66,10 @@ baseURL = "https://orchidmajumder.github.io"
   name = "BLOG"
   title = "Blog"
   url = "/blog"
+
+[[menu.main]]
+  identifier = "resume"
+  name = "RESUME"
+  title = "Resume"
+  url = "/resume.pdf"
 
