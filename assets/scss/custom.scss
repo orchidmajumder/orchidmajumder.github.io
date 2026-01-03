@@ -44,8 +44,13 @@ $mobile-breakpoint: 700px;
   padding: 0 1.5rem;
   
   h1 {
+    text-align: center;
+    width: 100%;
+    
     @media screen and (max-width: $mobile-breakpoint - 1) {
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
   
