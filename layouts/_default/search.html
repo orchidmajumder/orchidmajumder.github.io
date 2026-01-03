@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="Search posts..." autofocus>
+  <ul id="search-results"></ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script>
+  let fuse;
+  
+  fetch('/index.json')
+    .then(res => res.json())
+    .then(data => {
+      fuse = new Fuse(data, {
+        keys: ['title', 'content', 'tags'],
+        threshold: 0.3
+      });
+    });
+
+  document.getElementById('search-input').addEventListener('input', function(e) {
+    const results = fuse ? fuse.search(e.target.value) : [];
+    const container = document.getElementById('search-results');
+    container.innerHTML = results.slice(0, 10).map(r => 
+      `<li><a href="${r.item.permalink}">${r.item.title}</a><br><small>${r.item.date}</small></li>`
+    ).join('');
+  });
+</script>
+{{ end }}

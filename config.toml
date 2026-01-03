@@ -10,8 +10,13 @@ baseURL = "https://orchidmajumder.github.io"
 
 # RSS Feed
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "JSON"]
   section = ["HTML", "RSS"]
+
+# Sitemap
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
 
 # Optional params
 [params]
@@ -66,6 +71,12 @@ baseURL = "https://orchidmajumder.github.io"
   name = "BLOG"
   title = "Blog"
   url = "/blog"
+
+[[menu.main]]
+  identifier = "search"
+  name = "SEARCH"
+  title = "Search"
+  url = "/search"
 
 [[menu.main]]
   identifier = "resume"

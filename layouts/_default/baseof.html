@@ -12,13 +12,28 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+  <meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{- with .Params.image }}
+  <meta property="og:image" content="{{ . | absURL }}" />
+  {{- else }}
+  <meta property="og:image" content="{{ "images/og-default.png" | absURL }}" />
+  {{- end }}
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+
   <!-- Twitter -->
   {{ if isset .Site.Params "twitter" }}
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta name="twitter:description" content="{{ if .IsHome }}{{ htmlEscape .Site.Params.description }}{{ else }}{{ htmlEscape .Description }}{{ end }}"/>
   <meta name="twitter:site" content="{{ .Site.Params.twitterSite | default .Site.Params.twitter }}" />
   <meta name="twitter:creator" content="{{ .Site.Params.twitterCreator | default .Site.Params.twitter }}" />
+  {{- with .Params.image }}
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+  {{- end }}
   {{ end }}
 
   {{ partial "favicon.html" }}
@@ -50,6 +65,14 @@
     gtag('config', '{{ . }}');
   </script>
   {{- end }}
+
+  <!-- Dark mode -->
+  <script>
+    if (localStorage.getItem('darkMode') === 'true' || 
+        (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
 
 <body>
@@ -60,6 +83,22 @@
   <main>
     {{ block "main" . }} {{ end }}
   </main>
+
+  <!-- Dark mode toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+    <span class="dark-mode-toggle__icon">🌙</span>
+  </button>
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+      document.querySelector('.dark-mode-toggle__icon').textContent = 
+        document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    if (document.documentElement.classList.contains('dark')) {
+      document.querySelector('.dark-mode-toggle__icon').textContent = '☀️';
+    }
+  </script>
 
   {{ block "footer" . }} {{ end }}
 

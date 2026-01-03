@@ -1,0 +1,18 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $width := .Get "width" | default "800" -}}
+
+{{- $image := resources.Get $src -}}
+{{- if $image -}}
+  {{- $resized := $image.Resize (printf "%sx webp" $width) -}}
+  <figure>
+    <img src="{{ $resized.RelPermalink }}" alt="{{ $alt }}" loading="lazy" />
+    {{- with $caption -}}<figcaption>{{ . }}</figcaption>{{- end -}}
+  </figure>
+{{- else -}}
+  <figure>
+    <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" />
+    {{- with $caption -}}<figcaption>{{ . }}</figcaption>{{- end -}}
+  </figure>
+{{- end -}}
