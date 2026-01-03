@@ -1,12 +1,26 @@
-# Include your project-specific ignores in this file
-# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
-# Useful .gitignore templates: https://github.com/github/gitignore
-node_modules
-dist
-.cache
-.hugo_build.lock
-.htaccess
+# Hugo
+public/
 resources/
+.hugo_build.lock
+
+# Generated CSS
+*.min.css
+
+# Node
+node_modules/
 package-lock.json
-.editorconfig
-*.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+.cache/

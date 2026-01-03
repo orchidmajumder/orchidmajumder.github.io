@@ -60,8 +60,6 @@ $mobile-breakpoint: 700px;
 // Publications section
 .publications {
   margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
   
   h2 {
     font-size: 1.1rem;
@@ -88,6 +86,13 @@ $mobile-breakpoint: 700px;
       font-size: 0.9rem;
     }
   }
+}
+
+// Subtle divider
+.divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
 }
 
 // Social icons
