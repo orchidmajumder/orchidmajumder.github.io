@@ -1,0 +1,70 @@
+# Selected publications, shown on the homepage in this order.
+#
+# To add a paper, copy an entry and fill in:
+#   title:   paper title
+#   venue:   shown in parentheses, e.g. "CVPR 2024" or "arXiv"
+#   authors: list of authors, in order
+#   url:     link to the PDF
+
+- title: "The Amazon Nova Family of Models: Technical Report and Model Card"
+  venue: "arXiv"
+  authors:
+    - Amazon AGI
+  url: "https://arxiv.org/pdf/2506.12103"
+
+- title: "On the Scalability of Diffusion-Based Text-to-Image Generation"
+  venue: "CVPR 2024"
+  authors:
+    - Hao Li
+    - Yang Zou
+    - Ying Wang
+    - Orchid Majumder
+    - Yusheng Xie
+    - R Manmatha
+    - Ashwin Swaminathan
+    - Zhuowen Tu
+    - Stefano Ermon
+    - Stefano Soatto
+  url: "https://openaccess.thecvf.com/content/CVPR2024/papers/Li_On_the_Scalability_of_Diffusion-based_Text-to-Image_Generation_CVPR_2024_paper.pdf"
+
+- title: "Supervised Momentum Contrastive Learning for Few-Shot Classification"
+  venue: "arXiv"
+  authors:
+    - Orchid Majumder
+    - Avinash Ravichandran
+    - Subhransu Maji
+    - Alessandro Achille
+    - Marzia Polito
+    - Stefano Soatto
+  url: "https://arxiv.org/pdf/2101.11058"
+
+- title: "Incremental Few-Shot Meta-Learning via Indirect Discriminant Alignment"
+  venue: "ECCV 2020"
+  authors:
+    - Qing Liu
+    - Orchid Majumder
+    - Alessandro Achille
+    - Avinash Ravichandran
+    - Rahul Bhotika
+    - Stefano Soatto
+  url: "https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123520664.pdf"
+
+- title: "MARTHE: Scheduling the Learning Rate Via Online Hypergradients"
+  venue: "IJCAI 2020"
+  authors:
+    - Michele Donini
+    - Luca Franceschi
+    - Orchid Majumder
+    - Massimiliano Pontil
+    - Paolo Frasconi
+  url: "https://www.ijcai.org/proceedings/2020/0293.pdf"
+
+- title: "d-SNE: Domain Adaptation Using Stochastic Neighborhood Embedding"
+  venue: "CVPR 2019 Oral"
+  authors:
+    - Xiang Xu
+    - Xiong Zhou
+    - Ragav Venkatesan
+    - Gurumurthy Swaminathan
+    - Orchid Majumder
+  url: "https://openaccess.thecvf.com/content_CVPR_2019/papers/Xu_d-SNE_Domain_Adaptation_Using_Stochastic_Neighborhood_Embedding_CVPR_2019_paper.pdf"

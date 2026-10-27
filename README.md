@@ -10,6 +10,10 @@ hugo server -D   # -D includes drafts
 
 Open http://localhost:1313
 
+## Adding a Publication
+
+Publications on the homepage come from `data/publications.yaml`, shown in file order. Copy an entry and fill in the title, venue, authors and PDF link.
+
 ## Creating a Blog Post
 
 ```bash
