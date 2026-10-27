@@ -4,7 +4,7 @@ theme = ["hugo-theme-codex"]
 # Override these settings with your own.
 # Top-level keys must stay above the first [table] header, or TOML puts them inside that table.
 title = "Orchid Majumder"
-languageCode = "en-us"
+locale = "en-US"
 baseURL = "https://orchidmajumder.github.io"
 
 [pagination]

@@ -2,6 +2,8 @@
 
 ## Local Development
 
+Requires Hugo extended v0.158+ (CI uses the version in `.github/workflows/hugo.yml`) and Dart Sass (`brew install sass/sass/sass`).
+
 ```bash
 hugo server -D   # -D includes drafts
 ```
