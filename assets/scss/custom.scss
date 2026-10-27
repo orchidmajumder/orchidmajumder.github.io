@@ -29,6 +29,11 @@ $mobile-breakpoint: 700px;
   justify-content: center;
   align-items: flex-start;
   padding: 1rem 0 2rem;
+
+  // Line the name up with the first nav item on desktop
+  @media screen and (min-width: $mobile-breakpoint) {
+    padding-top: 2.5rem;
+  }
 }
 
 // Fix mobile nav overlap on homepage
@@ -42,7 +47,12 @@ $mobile-breakpoint: 700px;
   width: 100%;
   max-width: $content-max-width;
   padding: 0 1.5rem;
-  
+
+  // <main> already has a 1.5rem side gutter on phones; don't double it
+  @media screen and (max-width: $mobile-breakpoint - 1) {
+    padding: 0;
+  }
+
   h1 {
     text-align: center;
     width: 100%;
@@ -119,6 +129,13 @@ $mobile-breakpoint: 700px;
   justify-content: flex-start;
   padding-top: 1.5rem;
   margin-left: -0.8rem;
+}
+
+// Keep all icons on one row on very small phones
+@media screen and (max-width: 359px) {
+  .social-icons__link:not(:last-child) {
+    margin-right: 0.25rem;
+  }
 }
 
 // Blog post styling

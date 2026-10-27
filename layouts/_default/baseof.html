@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta name="language" content="en">
   <meta name="description" content="{{ if .IsHome}}{{ .Site.Params.Description }}{{ else }}{{.Page.Params.Description}}{{ end }}">
-  <meta name="keywords" content="{{ delimit .Keywords " , " }}">
+  <meta name="keywords" content="{{ delimit (.Keywords | default .Site.Params.keywords) ", " }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,14 +19,12 @@
   <meta property="og:url" content="{{ .Permalink }}" />
   {{- with .Params.image }}
   <meta property="og:image" content="{{ . | absURL }}" />
-  {{- else }}
-  <meta property="og:image" content="{{ "images/og-default.png" | absURL }}" />
   {{- end }}
   <meta property="og:site_name" content="{{ .Site.Title }}" />
 
   <!-- Twitter -->
   {{ if isset .Site.Params "twitter" }}
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="{{ if .Params.image }}summary_large_image{{ else }}summary{{ end }}" />
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta name="twitter:description" content="{{ if .IsHome }}{{ htmlEscape .Site.Params.description }}{{ else }}{{ htmlEscape .Description }}{{ end }}"/>
   <meta name="twitter:site" content="{{ .Site.Params.twitterSite | default .Site.Params.twitter }}" />
@@ -51,7 +49,7 @@
   {{ end }}
   
   {{ range .AlternativeOutputFormats }} 
-  {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.FirstSuffix.Suffix .Permalink $.Site.Title | safeHTML }} 
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end }} 
   {{ block "links" . }} {{ end }}
   {{ partial "seo-schema.html" .}}
