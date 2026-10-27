@@ -69,22 +69,16 @@ a {
     }
   }
 
+  // Both bio paragraphs use the same size and spacing
   h2, h3 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.6;
+    letter-spacing: normal;
     max-width: none;
 
     @media screen and (min-width: $mobile-breakpoint) {
-      font-size: 1.3rem;
-    }
-  }
-
-  h3 {
-    font-size: 1.05rem;
-
-    @media screen and (min-width: $mobile-breakpoint) {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
     }
   }
 }
