@@ -5,6 +5,8 @@ resources/
 
 # Generated CSS
 *.min.css
+# Vendored KaTeX stylesheet for build-time math (see README)
+!static/katex/katex.min.css
 
 # Node
 node_modules/
