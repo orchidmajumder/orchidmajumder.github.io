@@ -213,7 +213,7 @@ footer {
       margin-bottom: 0.5rem;
 
       &::before {
-        content: "-";
+        content: "\2022"; // round bullet
         color: $darkGrey;
         position: absolute;
         margin-left: -15px;
