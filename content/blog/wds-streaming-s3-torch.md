@@ -5,7 +5,6 @@ slug: "webdataset-streaming-s3-torch"
 description: "How to efficiently stream large datasets from S3 using WebDataset for PyTorch training"
 draft: true
 tags: ["pytorch", "s3", "webdataset", "aws", "distributed-training"]
-math: true
 toc: true
 ---
 

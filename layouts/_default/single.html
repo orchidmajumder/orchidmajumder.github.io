@@ -2,6 +2,14 @@
     {{ $.Scratch.Set "style_opts" (dict "src" "scss/pages/post.scss" "dest" "css/post.css") }}
 {{ end }}
 
+{{ define "links" }}
+  {{- /* Render the content first, so the math render hook has flagged whether this page has math */}}
+  {{- $noop := .WordCount }}
+  {{- if .Store.Get "hasMath" }}
+  <link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}">
+  {{- end }}
+{{ end }}
+
 {{ define "main" }}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2 2006" }}
 
@@ -16,9 +24,6 @@
           </header>
           <article class="post__content">
               {{ partial "anchored-headings.html" .Content }}
-              {{ if or .Params.math .Site.Params.math }}
-                  {{ partial "math.html" . }}
-              {{ end }}
           </article>
           {{ partial "tags.html" .}}
 

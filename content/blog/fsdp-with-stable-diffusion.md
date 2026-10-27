@@ -5,7 +5,6 @@ slug: "fsdp-pytorch-diffusion"
 description: "Scaling diffusion model training using Fully Sharded Data Parallel (FSDP)"
 draft: true
 tags: ["pytorch", "fsdp", "diffusion", "distributed-training"]
-math: true
 toc: true
 ---
 

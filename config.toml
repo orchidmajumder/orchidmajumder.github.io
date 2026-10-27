@@ -59,6 +59,14 @@ baseURL = "https://orchidmajumder.github.io"
   [markup.goldmark.renderer]
       unsafe = true
 
+  # Math is rendered to HTML at build time by
+  # layouts/_default/_markup/render-passthrough.html
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)'], ['$', '$']]
+
 # Controls the navigation
 [[menu.main]]
   identifier = "about"

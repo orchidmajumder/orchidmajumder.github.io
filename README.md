@@ -30,7 +30,6 @@ slug: "your-post-slug"
 description: "Brief description for SEO"
 draft: false
 tags: ["pytorch", "cuda", "ml"]
-math: true
 toc: true
 ---
 
@@ -100,11 +99,14 @@ Or with caption:
 
 | Option | Description |
 |--------|-------------|
-| `math: true` | Enable LaTeX rendering |
 | `toc: true` | Show table of contents |
 | `draft: true` | Hide from production |
 | `tags: [...]` | Post tags |
 
+## Math
+
+Write LaTeX between `$...$` or `\(...\)` for inline math, and `$$...$$` or `\[...\]` for display math. Hugo renders it with KaTeX when the site is built, so pages load no math JavaScript. A LaTeX error stops the build and names the file and line. The KaTeX stylesheet and fonts in `static/katex/` must match the KaTeX version inside Hugo; update them when you upgrade Hugo.
+
 ## Credits
 
-The layouts and styles started from [hugo-theme-codex](https://github.com/jakewies/hugo-theme-codex) and now live directly in this repo. Its MIT license is in `LICENSE-hugo-theme-codex.md`.
+The layouts and styles started from [hugo-theme-codex](https://github.com/jakewies/hugo-theme-codex) and now live directly in this repo. Its MIT license is in `LICENSE-hugo-theme-codex.md`. KaTeX is MIT licensed; see `static/katex/LICENSE.txt`.

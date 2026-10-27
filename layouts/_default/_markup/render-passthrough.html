@@ -1,0 +1,11 @@
+{{- /* Renders $...$, $$...$$, \(...\) and \[...\] to HTML with KaTeX at build time.
+  Pages that use math get the KaTeX stylesheet (see layouts/_default/single.html). */ -}}
+{{- $opts := dict "output" "htmlAndMathml" "displayMode" (eq .Type "block") }}
+{{- with try (transform.ToMath .Inner $opts) }}
+  {{- with .Err }}
+    {{- errorf "Could not render math with KaTeX: %s. See %s." . $.Position }}
+  {{- else }}
+    {{- .Value }}
+    {{- $.Page.Store.Set "hasMath" true }}
+  {{- end }}
+{{- end -}}
