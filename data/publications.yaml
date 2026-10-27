@@ -12,6 +12,23 @@
     - Amazon AGI
   url: "https://arxiv.org/pdf/2506.12103"
 
+- title: "Efficient Scaling of Diffusion Transformers for Text-to-Image Generation"
+  venue: "arXiv"
+  authors:
+    - Hao Li
+    - Shamit Lal
+    - Zhiheng Li
+    - Yusheng Xie
+    - Ying Wang
+    - Yang Zou
+    - Orchid Majumder
+    - R. Manmatha
+    - Zhuowen Tu
+    - Stefano Ermon
+    - Stefano Soatto
+    - Ashwin Swaminathan
+  url: "https://arxiv.org/pdf/2412.12391"
+
 - title: "On the Scalability of Diffusion-Based Text-to-Image Generation"
   venue: "CVPR 2024"
   authors:
