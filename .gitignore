@@ -24,3 +24,6 @@ Thumbs.db
 # Build
 dist/
 .cache/
+
+# LaTeX build files (resume); the PDF itself is built into static/resume.pdf
+resume/build/

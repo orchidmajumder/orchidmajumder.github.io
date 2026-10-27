@@ -1,0 +1,311 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{academicons}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, allcolors=magenta]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{4.08003pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Orchid Majumder} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} {+1 425 241 1741}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:orchidmajumder@gmail.com}{orchidmajumder@gmail.com}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/orchidmajumder/}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/orchidmajumder}{GitHub}
+    $|$
+    \faGlobe \hspace{.5pt} \href{https://scholar.google.com/citations?user=7KgIMosAAAAJ}{Google Scholar}
+    $|$
+    \faMapMarker \hspace{.5pt} Seattle, USA
+\end{center}
+
+\section{Work Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+  
+  \resumeSubheading
+      {Google Workspace}{Kirkland, USA}
+      {Senior Staff Software Engineer, Gemini Agent}{July 2026 \textbf{--} current}
+        \resumeItemListStart
+            \resumeItem{Working on long-horizon agentic evaluation and agentic recursive self-improvement for Gemini Agent on Google Workspace.}
+        \resumeItemListEnd
+ \resumeSubheading
+      {Amazon AGI}{Seattle, USA}
+      {Principal Research Engineer, Amazon Nova (Multi-Modal Pre-Training)}{October 2023 \textbf{--} July 2026}
+        \resumeItemListStart
+            \resumeItem{Research engineering lead for Amazon Nova foundational models pre-training. Developed a \textit{NeMo-Megatron} based distributed-training stack that is used to train Nova models \textit{(using 5D parallelism)}.}
+            \resumeItem{Worked on architecture research and pre-training scaling laws for Nova-2 and beyond. }
+        \resumeItemListEnd
+ \resumeSubheading
+      {AWS AI Labs}{Seattle, USA}
+      {Senior Research Engineer, Diffusion Models / Computer Vision} {April 2019 \textbf{--} September 2023}
+        \resumeItemListStart
+            \resumeItem{Research engineering lead for Amazon Titan multi-modal models and text-to-image/video diffusion models. Developed a \textit{PyTorch-FSDP} based distributed-training stack that was used to train large-scale image/video diffusion models on AWS. }
+            \resumeItem{Research engineering lead for Amazon Rekognition Custom Labels, an AWS AutoML service aimed towards helping customers build their own ML models with a few labeled samples.}
+            \resumeItem{Worked on research topics related to few-shot, continual and meta-learning algorithms for visual recognition and hyperparameter optimization \textit{(see \href{https://scholar.google.com/citations?user=7KgIMosAAAAJ}{Google Scholar})}.}
+        \resumeItemListEnd
+ \resumeSubheading
+      {AWS SageMaker}{Seattle, USA}
+      {Research Engineer, AI Labs} {March 2017 \textbf{--} March 2019}
+        \resumeItemListStart
+            \resumeItem{Part of the core team that launched Amazon SageMaker at AWS re:Invent 2017, a fully managed AWS service for building, training and deploying any kind of ML models.}
+            \resumeItem{Led the development effort for \href{https://docs.aws.amazon.com/sagemaker/latest/dg/inference-pipeline-real-time.html}{Inference Pipeline} for Amazon SageMaker.}
+            \resumeItem{Developed deep-learning based NLP algorithms including \href{https://docs.aws.amazon.com/sagemaker/latest/dg/seq-2-seq.html}{Seq2Seq} and \href{https://docs.aws.amazon.com/sagemaker/latest/dg/object2vec.html}{Object2Vec} which are offered as built-in algorithms within Amazon SageMaker.}
+        \resumeItemListEnd
+ \resumeSubheading
+        {Amazon}{Bangalore, India}
+        {Software Engineer, Amazon India} {July 2014 \textbf{--} March 2017}
+        \resumeItemListStart
+            \resumeItem{Engineering lead for registration and order management for individual sellers on \href{https://Amazon.in}{Amazon India} --- led a large-scale cross-team effort to develop a software system that enabled individual sellers to get started as professional sellers.}
+            \resumeItem{Built a rule-based recommendation engine to help sellers determine the price for their products, repurposed Amazon logistics stack for individual sellers and simplified the registration workflow for new individual sellers.}
+        \resumeItemListEnd    
+  \resumeSubHeadingListEnd
+
+
+\section{Internship Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Amazon}{Bangalore, India}
+        {Software Engineer Intern, Amazon Retail}{June 2013 \textbf{--} July 2013}
+        \resumeItemListStart
+            \resumeItem{Built an intermediate caching layer using Amazon DynamoDB to reduce request latency.}
+            \resumeItem{Built a distributed log parser using Hadoop/MapReduce on Amazon EMR.}
+        \resumeItemListEnd
+ \resumeSubheading
+        {Indian Statistical Institute}{Kolkata, India}
+        {Research Intern, Machine Perception / Computer Vision} {June 2012 \textbf{--} July 2012}
+        \resumeItemListStart
+            \resumeItem{Worked on fuzzy neural-network based algorithms to identify Indian dance styles from images.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+\section{Selected Publications}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+
+        \textbf{The Amazon Nova Family of Models: Technical Report and Model Card (arXiv) --}{\ Amazon AGI.} \\ \vspace{3pt}
+
+        \textbf{On the Scalability of Diffusion-Based Text-to-Image Generation (CVPR 2024) --}{\ Hao Li, Yang Zou, Ying Wang, Orchid Majumder, Yusheng Xie, R Manmatha, Ashwin Swaminathan, Zhuowen Tu, Stefano Ermon, Stefano Soatto.} \\ \vspace{3pt}
+        
+        \textbf{Revisiting Contrastive Learning for Few-Shot Classification (arXiv) --}{\ Orchid Majumder, Avinash Ravichandran, Subhransu Maji, Marzia Polito, Rahul Bhotika, Stefano Soatto.} \\ \vspace{3pt}
+        
+        \textbf{Incremental Meta-Learning via Indirect Discriminant Analysis (ECCV 2020) --}{\ Qing Liu, Orchid Majumder, Avinash Ravichandran, Rahul Bhotika, Stefano Soatto.} \\ \vspace{3pt}
+
+        \textbf{MARTHE: Scheduling the Learning Rate Via Online Hypergradients (IJCAI 2020) --}{\ Michele Donini, Luca Franceschi, Orchid Majumder, Massimiliano Pontil, Paolo Frasconi.} \\ \vspace{3pt}
+
+        \textbf{d-SNE: Domain Adaptation Using Stochastic Neighborhood Embedding (CVPR 2019 Oral) --}{\ Xiang Xu, Xiong Zhou, Ragav Venkatesan, Gurumurthy Swaminathan, Orchid Majumder.} \\ \vspace{3pt}
+
+    }}
+  \resumeSubHeadingListEnd
+
+\section{Conferences}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Area Chair --}{\ NeurIPS, ICML, ICLR, CVPR, ECCV.} \\ \vspace{3pt}
+        \textbf{Outstanding Reviewer --}{\ NeurIPS, CVPR, ECCV.} \\ \vspace{3pt}
+        \textbf{Peer Review --}{\ NeurIPS, ICLR, CVPR, ICML, ECCV, ICCV.} \\ \vspace{3pt}
+        \textbf{Journal Review --}{\ TPAMI, TMLR, IEEE TCSVT.} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+\section{Patents}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Automated Machine Learning Pipeline Exploration and Deployment}{\ (US : 11727314B2).} \\ \vspace{3pt}
+    }}
+    \small{\item{
+        \textbf{Building Sequence to Sequence (S2S) models using Previously Generated S2S Models}{\ (US : 11748610B1).} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+\section{Academics}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeEducationHeading
+      {Columbia University in the City of New York
+      }{New York, USA}
+      {M.S. in Computer Science (Machine Learning Track)}{2020 \textbf{--} 2022}
+      {}{}
+
+    \resumeSubheading
+      {Jadavpur University
+      }{Kolkata, India}
+      {B.S. in Computer Science and Engineering}{2010 \textbf{--} 2014}
+    
+  \resumeSubHeadingListEnd
+
+\section{Open Source}
+    \vspace{3pt}
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+        {\textbf{adatune} $|$ \emph{\href{https://github.com/awslabs/adatune}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Implementation of IJCAI 2020 paper - “MARTHE: Scheduling the Learning Rate Via Online Hypergradients”.}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+        {\textbf{sagemaker-sparkml-serving-container} $|$ \emph{\href{https://github.com/aws/sagemaker-sparkml-serving-container}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A toolkit for deploying SparkML models efficiently in SageMaker without an Apache Spark runtime.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+\section{Other Achievements}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Mathematics Olympiad -- }{\ One of the 500 students all over India to qualify for the Indian National Mathematical Olympiad (INMO) in 2008.} \\ \vspace{3pt}
+    }}
+    \small{\item{
+        \textbf{Entrance Examinations -- }{\ Ranked in the top 0.1\% in the secondary examination, higher-secondary examination and engineering entrance examination in the state of West Bengal in India.} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+%----------- REFERENCES -----------
+
+% \section{References}
+  % \resumeSubHeadingListStart
+    
+  % \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
