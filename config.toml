@@ -68,22 +68,26 @@ baseURL = "https://orchidmajumder.github.io"
   name = "ABOUT"
   title = "About"
   url = "/"
+  weight = 1
 
 [[menu.main]]
   identifier = "blog"
   name = "BLOG"
   title = "Blog"
   url = "/blog"
+  weight = 2
 
 [[menu.main]]
   identifier = "search"
   name = "SEARCH"
   title = "Search"
   url = "/search"
+  weight = 3
 
 [[menu.main]]
   identifier = "resume"
   name = "RESUME"
   title = "Resume"
   url = "/resume.pdf"
+  weight = 4
 
