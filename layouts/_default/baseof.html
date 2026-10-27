@@ -64,14 +64,6 @@
     gtag('config', '{{ . }}');
   </script>
   {{- end }}
-
-  <!-- Dark mode -->
-  <script>
-    if (localStorage.getItem('darkMode') === 'true' || 
-        (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
 </head>
 
 <body>
@@ -82,22 +74,6 @@
   <main>
     {{ block "main" . }} {{ end }}
   </main>
-
-  <!-- Dark mode toggle -->
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
-    <span class="dark-mode-toggle__icon">🌙</span>
-  </button>
-  <script>
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
-      localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
-      document.querySelector('.dark-mode-toggle__icon').textContent = 
-        document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
-    }
-    if (document.documentElement.classList.contains('dark')) {
-      document.querySelector('.dark-mode-toggle__icon').textContent = '☀️';
-    }
-  </script>
 
   {{ block "footer" . }} {{ end }}
 

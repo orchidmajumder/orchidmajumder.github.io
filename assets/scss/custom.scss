@@ -307,86 +307,6 @@ table {
   }
 }
 
-
-// Dark mode toggle button
-.dark-mode-toggle {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  z-index: 100;
-  
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-// Dark mode styles
-html.dark {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-  
-  body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-  }
-  
-  .nav {
-    background: #1a1a1a;
-  }
-  
-  .burger__container {
-    background: #1a1a1a;
-  }
-  
-  .nav__list a {
-    color: #999;
-    
-    &.active, &:hover {
-      color: #e0e0e0;
-    }
-  }
-  
-  .burger__meat, .burger__meat::after, .burger__meat::before {
-    background: #e0e0e0;
-  }
-  
-  a {
-    color: #e0e0e0;
-  }
-  
-  .divider {
-    border-top-color: #333;
-  }
-  
-  .dark-mode-toggle {
-    background: #333;
-  }
-  
-  pre, code {
-    background-color: #2d2d2d !important;
-  }
-  
-  .post__date, .post__reading-time {
-    color: #999;
-  }
-  
-  .social-icons a svg {
-    fill: #e0e0e0;
-  }
-  
-  .social-icons__icon {
-    filter: invert(1);
-  }
-}
-
 // Reading time
 .post__reading-time {
   color: #666;
@@ -432,15 +352,6 @@ html.dark {
   }
 }
 
-html.dark .publications a {
-  color: #6db3f2;
-}
-
-html.dark .related-posts {
-  border-top-color: #333;
-}
-
-
 // Search page
 .search-container {
   max-width: $content-max-width;
@@ -483,21 +394,5 @@ html.dark .related-posts {
   
   small {
     color: #666;
-  }
-}
-
-html.dark {
-  #search-input {
-    background: #2d2d2d;
-    border-color: #444;
-    color: #e0e0e0;
-  }
-  
-  #search-results li {
-    border-bottom-color: #333;
-  }
-  
-  #search-results small {
-    color: #999;
   }
 }
