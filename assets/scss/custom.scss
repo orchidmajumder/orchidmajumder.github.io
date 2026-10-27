@@ -1,15 +1,19 @@
 // Variables
 $content-max-width: 650px;
 $mobile-breakpoint: 700px;
+$accent: #a00000; // dark red for links and post titles, as on siboehm.com
 
 // Base overrides
 .fancy {
   color: black;
 }
 
+a {
+  color: $accent;
+}
+
 .nav {
-  font-size: 15px;
-  font-family: "Monaco", "Consolas", "Menlo", monospace;
+  font-size: 16px;
   color: black;
   position: absolute;
 }
@@ -56,31 +60,31 @@ $mobile-breakpoint: 700px;
   h1 {
     text-align: center;
     width: 100%;
-    
+    font-weight: 400;
+
     @media screen and (max-width: $mobile-breakpoint - 1) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
     }
   }
-  
+
   h2, h3 {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 400;
     line-height: 1.6;
     max-width: none;
-    
+
     @media screen and (min-width: $mobile-breakpoint) {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
   }
-  
+
   h3 {
-    font-size: 0.95rem;
-    font-weight: 200;
-    
+    font-size: 1.05rem;
+
     @media screen and (min-width: $mobile-breakpoint) {
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
   }
 }
@@ -88,30 +92,30 @@ $mobile-breakpoint: 700px;
 // Publications section
 .publications {
   margin-top: 2.5rem;
-  
+
   h2 {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.35rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
-    
+
     @media screen and (min-width: $mobile-breakpoint) {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   li {
     margin-bottom: 1.25rem;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    
+    font-size: 1rem;
+    line-height: 1.5;
+
     @media screen and (min-width: $mobile-breakpoint) {
-      font-size: 0.9rem;
+      font-size: 1.05rem;
     }
   }
 }
@@ -140,20 +144,57 @@ $mobile-breakpoint: 700px;
 
 // Blog post styling
 .post {
-  font-size: 15px;
-  font-weight: 200;
-  
+  font-size: 18px;
+
   @media screen and (min-width: $mobile-breakpoint) {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
-#post__title {
-  font-size: 1.3rem;
-  
-  @media screen and (min-width: $mobile-breakpoint) {
-    font-size: 1.5rem;
+.post__content {
+  p, li, blockquote {
+    line-height: 1.6;
   }
+
+  h2, h3 {
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.45em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  blockquote {
+    font-size: 1em;
+  }
+
+  // Monospace looks larger than ET Book at the same size
+  code {
+    font-size: 0.75em;
+  }
+}
+
+.post__date {
+  font-size: 0.95rem;
+}
+
+#post__title {
+  font-size: 1.75rem;
+  font-weight: 400;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    font-size: 2.1rem;
+  }
+}
+
+// Post titles in the blog and tag lists
+.post__title a {
+  color: $accent;
 }
 
 // Pagination
@@ -186,7 +227,6 @@ $mobile-breakpoint: 700px;
 }
 
 .pagination > .page-item.active {
-  background-color: white;
   text-decoration: underline;
 }
 
@@ -203,12 +243,11 @@ $mobile-breakpoint: 700px;
   text-decoration: none;
   color: #000a33;
   background-color: transparent;
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: lighter;
   font-style: italic;
 
   &:hover {
-    background-color: white;
     text-decoration: underline;
   }
 }
@@ -247,11 +286,10 @@ $mobile-breakpoint: 700px;
   text-decoration: none;
   color: #000a33;
   background-color: transparent;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-style: italic;
 
   &:hover {
-    background-color: white;
     text-decoration: underline;
   }
 }
@@ -310,7 +348,7 @@ table {
 // Reading time
 .post__reading-time {
   color: #666;
-  font-size: 0.9em;
+  font-size: 0.95rem;
 }
 
 // Related posts
@@ -343,7 +381,7 @@ table {
 
 // Paper links
 .publications a {
-  color: #0066cc;
+  color: $accent;
   text-decoration: none;
   font-size: 0.85em;
   

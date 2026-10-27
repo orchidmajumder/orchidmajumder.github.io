@@ -109,4 +109,4 @@ Write LaTeX between `$...$` or `\(...\)` for inline math, and `$$...$$` or `\[..
 
 ## Credits
 
-The layouts and styles started from [hugo-theme-codex](https://github.com/jakewies/hugo-theme-codex) and now live directly in this repo. Its MIT license is in `LICENSE-hugo-theme-codex.md`. KaTeX is MIT licensed; see `static/katex/LICENSE.txt`.
+The layouts and styles started from [hugo-theme-codex](https://github.com/jakewies/hugo-theme-codex) and now live directly in this repo. Its MIT license is in `LICENSE-hugo-theme-codex.md`. KaTeX is MIT licensed; see `static/katex/LICENSE.txt`. The site font is ET Book (MIT licensed, from Tufte CSS); see `static/fonts/et-book/LICENSE.txt`.

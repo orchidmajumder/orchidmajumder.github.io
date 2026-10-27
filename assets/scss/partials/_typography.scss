@@ -8,8 +8,33 @@ $baseLineHeight: 1.5;
 $scale: 1.414;
 $leading: $baseLineHeight * 1rem;
 
+// ET Book, the font of Tufte CSS (license in static/fonts/et-book/)
+@font-face {
+  font-family: "et-book";
+  src: url("/fonts/et-book/et-book-roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("/fonts/et-book/et-book-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("/fonts/et-book/et-book-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
-  font-family: "Monaco", "Consolas", "Menlo", monospace;
+  font-family: $serif;
   -webkit-font-smoothing: antialiased;
   font-size: 100%;
 
@@ -84,7 +109,7 @@ blockquote {
     content: "\201C";
 
     font-size: 6em;
-    font-family: "Monaco", "Consolas", "Menlo", monospace;
+    font-family: $serif;
     margin-top: 0.1em;
     margin-left: -0.2em;
 

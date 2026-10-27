@@ -3,13 +3,16 @@ $meatWidth: 28px;
 $meatHeight: 2px;
 $burgerContainerHeight: 4rem;
 
+// fonts
+$serif: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+
 // colors
 $black: #111;
 $lightGrey: #f7f7f7;
 $greyTableBorder: #eeeeee;
 $grey: #9b9b9b;
 $darkGrey: #717171;
-$white: #fff;
+$white: #fffff8; // page background (the warm off-white of Tufte CSS)
 $primary: #9013fe;
 
 // screenSizes
