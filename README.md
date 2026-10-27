@@ -28,6 +28,7 @@ title: "Your Post Title"
 date: 2026-01-03
 slug: "your-post-slug"
 description: "Brief description for SEO"
+summary: "Two line summary shown under the title on the blog list"
 draft: false
 tags: ["pytorch", "cuda", "ml"]
 toc: true
@@ -99,6 +100,7 @@ Or with caption:
 
 | Option | Description |
 |--------|-------------|
+| `summary: "..."` | Short summary under the title on the blog and tag lists (about 150 characters fits two lines on a laptop). Falls back to `description` |
 | `toc: true` | Show table of contents |
 | `draft: true` | Hide from production |
 | `tags: [...]` | Post tags |

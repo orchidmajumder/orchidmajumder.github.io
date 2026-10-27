@@ -22,6 +22,9 @@
         <h2 class="post__title">
           <a href="{{.RelPermalink}}">{{ .Title }}</a>
         </h2>
+        {{- with .Params.summary | default .Description }}
+        <p class="post__summary">{{ . }}</p>
+        {{- end }}
       </div>
     </li>
     {{ end }}

@@ -3,6 +3,7 @@ title = "Scaling Diffusion Transformers for Text to Image Generation"
 date = "15 Jun 2025"
 slug = "scaling_diffusion_transformers"
 description = "A summary of our study on which diffusion transformer design scales best for text to image generation, and what more data and better captions add."
+summary = "Which diffusion transformer design scales best for text to image generation? UViT does. A 2.3B UViT matches the SDXL UNet, and more data helps every design."
 tags = ["diffusion", "transformers", "scaling"]
 toc = true
 +++

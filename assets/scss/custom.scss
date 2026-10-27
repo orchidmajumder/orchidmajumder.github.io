@@ -138,10 +138,10 @@ a {
 
 // Blog post styling
 .post {
-  font-size: 18px;
+  font-size: 17px;
 
   @media screen and (min-width: $mobile-breakpoint) {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -189,6 +189,20 @@ a {
 // Post titles in the blog and tag lists
 .post__title a {
   color: $accent;
+}
+
+// Short summary under each title in the blog and tag lists.
+// The width cap keeps a summary of about 150 characters to two lines.
+.post-list .post {
+  margin-bottom: 2rem;
+}
+
+.post__summary {
+  margin: 0.35rem 0 0;
+  max-width: 36em;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
 }
 
 // Phones: give the post footer icons the full width so they stay on one
