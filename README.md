@@ -100,3 +100,7 @@ Or with caption:
 | `toc: true` | Show table of contents |
 | `draft: true` | Hide from production |
 | `tags: [...]` | Post tags |
+
+## Credits
+
+The layouts and styles started from [hugo-theme-codex](https://github.com/jakewies/hugo-theme-codex) and now live directly in this repo. Its MIT license is in `LICENSE-hugo-theme-codex.md`.

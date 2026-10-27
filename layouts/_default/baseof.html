@@ -42,8 +42,7 @@
   {{ $custom_styles_opts := (dict "src" "scss/custom.scss" "dest" "css/custom.css") }}
   
   {{ $current_page := . }}
-  {{/* Dart Sass; the theme's SCSS still uses older syntax, so silence those deprecation warnings */}}
-  {{ $sass_opts := dict "transpiler" "dartsass" "silenceDeprecations" (slice "import" "global-builtin" "color-functions" "slash-div") }}
+  {{ $sass_opts := dict "transpiler" "dartsass" }}
 
   {{ range (slice $base_styles_opts $custom_styles_opts) }}
     {{ $style := resources.Get .src | resources.ExecuteAsTemplate .dest $current_page | css.Sass $sass_opts | minify | fingerprint }}

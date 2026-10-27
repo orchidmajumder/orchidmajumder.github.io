@@ -1,0 +1,8 @@
+@use "../main";
+@use "../partials/vars" as *;
+
+main {
+  @media screen and (min-width: $medium) {
+    padding-left: calc(10% + #{$navWidth});
+  }
+}
